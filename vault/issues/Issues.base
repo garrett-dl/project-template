@@ -1,0 +1,64 @@
+filters:
+  and:
+    - 'file.hasTag("task")'
+    - 'file.inFolder("issues")'
+
+properties:
+  id:
+    displayName: "ID"
+  title:
+    displayName: "Title"
+  type:
+    displayName: "Type"
+  status:
+    displayName: "Status"
+  priority:
+    displayName: "Priority"
+  area:
+    displayName: "Area"
+  due:
+    displayName: "Due"
+  branch:
+    displayName: "Branch"
+
+views:
+  - type: table
+    name: "Open"
+    filters:
+      and:
+        - 'status != "done"'
+        - 'status != "cancelled"'
+    order:
+      - id
+      - title
+      - type
+      - status
+      - priority
+      - area
+      - due
+      - branch
+
+  - type: table
+    name: "Board"
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - id
+      - title
+      - type
+      - priority
+      - area
+
+  - type: table
+    name: "Done"
+    filters:
+      or:
+        - 'status == "done"'
+        - 'status == "cancelled"'
+    order:
+      - id
+      - title
+      - type
+      - completedDate
+      - pr

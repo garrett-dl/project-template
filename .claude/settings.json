@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(vault/**)",
+      "Edit(vault/wiki/**)",
+      "Edit(vault/issues/**)",
+      "Write(vault/wiki/**)",
+      "Write(vault/issues/**)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(grep *)",
+      "Bash(rg *)",
+      "Bash(ls *)"
+    ],
+    "deny": [
+      "Edit(vault/raw/**)",
+      "Write(vault/raw/**)",
+      "Edit(vault/.obsidian/**)",
+      "Write(vault/.obsidian/**)",
+      "Bash(rm -rf *)"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+# --- Obsidian: per-machine state (keep app.json, community-plugins.json, core-plugins.json, plugin data) ---
+vault/.obsidian/workspace.json
+vault/.obsidian/workspace-mobile.json
+vault/.obsidian/workspace/
+vault/.obsidian/cache/
+vault/.obsidian/plugins/*/main.js
+vault/.obsidian/plugins/*/styles.css
+vault/.obsidian/plugins/*/manifest.json
+vault/.trash/
+.DS_Store
+
+# --- Claude Code: local-only settings ---
+.claude/settings.local.json
+
+# --- Raw sources you don't want in git (uncomment as needed) ---
+# vault/raw/papers/*.pdf
+# vault/raw/data/*.csv
+
+# --- Node / TypeScript (adjust for your stack) ---
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
